@@ -37,6 +37,8 @@ public class MyTest {
 
     @Test
     public void test() throws IOException, CustomException {
+        System.out.println("123");
+        System.out.println("134");
         //System.out.println(signinTodayService.selectSigninTodayByUid(17));
         //System.out.println(articleService.selectArticleByUid(17));
         //System.out.println(relationService.selectByIdol(17));

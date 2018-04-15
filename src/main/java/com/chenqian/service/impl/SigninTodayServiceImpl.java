@@ -35,6 +35,7 @@ public class SigninTodayServiceImpl implements SigninTodayService{
      */
     @Override
     public List<SigninToday> getSigninTodays(int current, int size) {
+        System.out.println("1254");
         PageHelper.startPage(current, size);
         return this.getSigninTodayAll();
     }

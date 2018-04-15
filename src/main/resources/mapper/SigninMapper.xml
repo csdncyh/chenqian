@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chenqian.dao.SigninTodayMapper">
+    <!--<resultMap id="UserInfoMap" type="com.car.entity.UserInfo">-->
+    <!--<id column="id" property="id"></id>-->
+    <!--<result column="login_name" property="loginName"></result>-->
+    <!--<result column="pass_word" property="passWord"></result>-->
+    <!--</resultMap>-->
+
+    <select id="getSigninTodayByTime" parameterType="java.util.Date" resultType="com.chenqian.entity.SigninToday">
+        SELECT * FROM signinToday WHERE time <![CDATA[<=]]> #{time}
+    </select>
+
+
+    <select id="selectSigninTodayByUid"  resultType="com.chenqian.entity.SigninToday">
+        SELECT * FROM signinToday WHERE uid = #{uid} ORDER BY signinTodayId DESC
+    </select>
+
+</mapper>
